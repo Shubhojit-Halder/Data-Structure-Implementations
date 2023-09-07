@@ -14,17 +14,16 @@ class Node{
             this->next=NULL;
         }
 
-        //destructor
-        // ~Node()
-        // {
-        //     int val=this->data;
-        //     if(next!=NULL)
-        //     {
-        //         delete next;
-        //         this->next=NULL;
-        //     }
-        //     cout<<"Memory free for node with data"<<val<<endl;
-        // }
+        ~Node()
+        {
+            int value=this->data;
+            //memory free
+            if(this->next!=NULL){
+                delete next;
+                this->next=NULL;
+            }
+            cout<<"memory is free for node with data"<<value<<endl;
+        }
 };
 int getLength(Node* head)
 {

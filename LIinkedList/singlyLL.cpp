@@ -13,7 +13,7 @@ class Node{
             this->next=NULL;
         }
 
-        //Destrutor
+        // Destrutor
         ~Node()
         {
             int value=this->data;
@@ -72,7 +72,7 @@ void DeleteAtHead(Node* &head)
     temp->next=NULL;
     delete temp;
 }
-void DeleteAtPos(Node* &head,int pos){
+void DeleteAtPos(Node* &head,Node* &tail,int pos){
     if(pos==1)
         DeleteAtHead(head);
     else{
@@ -88,8 +88,11 @@ void DeleteAtPos(Node* &head,int pos){
         prev->next=curr->next;
         //if the node thats to be deleted is the last node
         if(curr->next==NULL)
+        {
+            tail=prev;
+        }
             
-        
+
         curr->next=NULL;
         delete curr;
         
@@ -118,7 +121,8 @@ int main()
     InsertAtTail(tail,7);
     Print(head);
     DeleteAtHead(head);
-    DeleteAtPos(head,1);
-    DeleteAtPos(head,5);
+    // DeleteAtPos(head,1);
+    DeleteAtPos(head,tail,5);
+    cout<<tail->data<<endl;
     Print(head);
 }
