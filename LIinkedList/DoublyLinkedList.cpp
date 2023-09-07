@@ -150,9 +150,9 @@ int main()
     insertAtPosition(tail, head, 5, 100);
     Print(head);
     deleteNode(1,head);
-    deleteNode(3,head);
+    // deleteNode(3,head);
     Print(head);
-    cout<<getLength(head);
+    // cout<<getLength(head);
 
    
     // cout<<head->data<<" "<<tail->data<<endl;
