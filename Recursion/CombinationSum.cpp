@@ -3,24 +3,23 @@
 using namespace std;
 class CombinationSum
 {
-void combination(int i, int t, vector<int> &arr, vector<vector<int>> &ans, vector<int> &ds)
+void combination(int i, int target, vector<int> &arr, vector<vector<int>> &ans, vector<int> &ds)
     {
         if(i == arr.size()){
-            if(t==0){
-                
+            if(target==0){
                 ans.push_back(ds);
                 return;
             }
             return;
         }
         
-        if(arr[i]<=t)
+        if(arr[i]<=target)
         {
             ds.push_back(arr[i]);
-            combination(i,t-arr[i],arr,ans,ds);
+            combination(i,target-arr[i],arr,ans,ds);
             ds.pop_back();
         }
-        combination(i+1,t,arr,ans,ds);
+        combination(i+1,target,arr,ans,ds);
     }
     
   public:

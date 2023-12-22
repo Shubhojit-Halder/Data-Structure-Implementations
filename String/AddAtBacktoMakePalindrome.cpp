@@ -8,7 +8,7 @@ bool checkPalindrome(string s){
     return false;
 }
 int main(){
-    string s="abcde";
+    string s="babcb";
     string sp;
     string ans="";
     for(int i=0;i<s.length();i++){

@@ -12,11 +12,11 @@ private:
         if(idx>=arr.size())
             return;
         
-        // if(sum+arr[idx]<=target){
+        if(sum+arr[idx]<=target){
             ds.push_back(arr[idx]);
             solve(idx+1,sum+arr[idx],target,arr,ans,ds); //take
             ds.pop_back();
-        // }
+        }
         solve(idx+1,sum,target,arr,ans,ds); //not take
     }
 public:
