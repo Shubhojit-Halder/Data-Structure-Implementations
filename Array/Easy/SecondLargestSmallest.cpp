@@ -4,9 +4,6 @@ int secondLargest(int arr[])
 {
     int max=INT_MIN;
     int sec=INT_MIN;
-    
-    // if(n<2)
-    //     return -1;
     for(int i=0;i<4;i++)
     {
         if(max<arr[i])
